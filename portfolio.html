@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            background-image: url(sky-color-paper-abstract-background_608068-2754.webp);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        section {
+            font-size: large;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        #contactForm {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pranav Lekhi</h1>
+        <h3>(One and Only)</h3>
+        <p>Web Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about"><b>About Me</b></a>
+        &nbsp;
+        &nbsp;
+        <a href="#skills"><b>Skills</b></a>
+        &nbsp;
+        &nbsp;
+        <a href="#projects"><b>Projects</b></a>
+        &nbsp;
+        &nbsp;
+        <a href="#contact"><b>Contact</b></a>
+    </nav>
+
+    <section id="about" class="container">
+        <img src="resume_photo.jpeg" width="25%" alt="Resume photo">
+        <h2>About Me</h2>
+        <p>            
+            Hello, I'm Pranav Lekhi, a passionate and dedicated web developer with a strong background in Information technology. With a keen eye for detail and a commitment to excellence, I thrive on turning ideas into functional and visually appealing websites.
+            
+            I bring to the table a solid foundation in web development technologies, including HTML5, CSS3, and JavaScript.
+        
+            I possess a foundational understanding of data analysis(MS Excel, MySQL and Tableau), complementing my skills in web development to deliver holistic solutions.
+        </p>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>C++</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>DSA</li>
+            <li>My SQL</li>
+            <li>MS EXCEL</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <br>
+        <div class="project">
+            <h3><b>SMART DUSTBIN</b></h3>
+            <img src="smart dustbin.webp" width="25%" alt="smart dustbin">
+            <p>I spearheaded a Smart Dustbin project leveraging Arduino Uno and IR sensors, implementing robust C++ programming. This innovative system autonomously detects and segregates waste, showcasing my proficiency in hardware programming and IoT technologies for efficient and automated waste management.</p>
+        </div>
+        <br>
+        <br>
+        <div class="project">
+            <h3><b>PORTFOLIO WEBSITE</b></h3>
+            <img src="Screenshot (54).png" width="25%" alt="portfolio web">
+            <p>I crafted a dynamic and visually appealing portfolio website showcasing your skills and achievements. Built with HTML, CSS, and JavaScript, the site features sections for an introduction, skills, projects, and a contact form. The design emphasizes a clean layout and smooth navigation, providing a professional platform to present your profile and engage with visitors effectively.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm" onsubmit="validateForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="1" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Perform additional validation if needed
+
+            alert('Form submitted successfully!\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+            // You can add further processing or send the form data to a server.
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
